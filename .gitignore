@@ -1,0 +1,21 @@
+# Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+pubspec.lock
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Grading artifacts
+test_results.txt
+grade_summary.txt
+GRADE_REPORT.md
