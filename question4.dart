@@ -10,19 +10,19 @@ abstract class Vehicle {
   String brand;
   String model;
   int year;
-  
+
   Vehicle(this.brand, this.model, this.year);
-  
+
   // Abstract methods
   void start();
   void stop();
-  
+
   // Concrete method
   void displayInfo() {
     // TODO: Display vehicle information
     print("Vehicle Info: $year $brand $model");
   }
-  
+
   // Add a method to calculate vehicle age (current year - vehicle year)
   int calculateAge() {
     // TODO: Calculate and return vehicle age
@@ -36,21 +36,22 @@ abstract class Vehicle {
 //      - Override start() and stop() methods
 class Car extends Vehicle {
   int numberOfDoors;
-  
-  Car(String brand, String model, int year, this.numberOfDoors) : super(brand, model, year);
-  
+
+  Car(String brand, String model, int year, this.numberOfDoors)
+      : super(brand, model, year);
+
   @override
   void start() {
     // TODO: Implement car start method
     print("Starting the car engine...");
   }
-  
+
   @override
   void stop() {
     // TODO: Implement car stop method
     print("Stopping the car engine...");
   }
-  
+
   @override
   void displayInfo() {
     // TODO: Override to show car-specific info
@@ -63,21 +64,22 @@ class Car extends Vehicle {
 //      - Override start() and stop() methods
 class Motorcycle extends Vehicle {
   bool hasWindshield;
-  
-  Motorcycle(String brand, String model, int year, this.hasWindshield) : super(brand, model, year);
-  
+
+  Motorcycle(String brand, String model, int year, this.hasWindshield)
+      : super(brand, model, year);
+
   @override
   void start() {
     // TODO: Implement motorcycle start method
     print("Starting the motorcycle engine...");
   }
-  
+
   @override
   void stop() {
     // TODO: Implement motorcycle stop method
     print("Stopping the motorcycle engine...");
   }
-  
+
   @override
   void displayInfo() {
     // TODO: Override to show motorcycle-specific info
@@ -92,7 +94,7 @@ void main() {
     Car("Toyota", "Camry", 2020, 4),
     Motorcycle("Honda", "CBR", 2021, true),
   ];
-  
+
   // TODO: Demonstrate polymorphism
   for (Vehicle vehicle in vehicles) {
     vehicle.displayInfo();
